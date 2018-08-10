@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content_title %}Home{% endblock %}
+
+{% block title_box %}Dashboard{% endblock %}
+
+{% block conteudo_principal %}
+  <a class="btn btn-lg btn-primary" href="/listar-funcionarios?maior=500">>500</a>
+  <a class="btn btn-lg btn-primary" href="/listar-funcionarios?maior=1000">>1000</a>
+  <a class="btn btn-lg btn-primary" href="/listar-funcionarios?maior=5000">>5000</a>
+{% endblock %}

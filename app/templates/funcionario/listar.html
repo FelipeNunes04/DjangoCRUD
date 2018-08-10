@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block content_title %}Funcionários{% endblock %}
+{% block title_box %} Listar {% endblock %}
+
+{% block conteudo_principal %} 
+<table id="exafple1" class="table table-bordered table-striped">
+	<thead>
+		<tr>
+			<th>Nome</th>
+			<th>Endereço</th>
+			<th>Cidade</th>
+			<th>Estado</th>
+			<th>CPF</th>
+			<th>Função</th>
+			<th>Salário</th>
+		</tr>
+	</thead>
+	<tbody>
+	{% for f in object_list %}
+		<tr>
+			<td>{{ f.nome }}</td>
+			<td>{{ f.endereco }}</td>
+			<td>{{ f.cidade }}</td>
+			<td>{{ f.estado }}</td>
+			<td>{{ f.cpf }}</td>
+			<td>{{ f.funcao }}</td>
+			<td>R${{ f.salario }}</td>	
+		</tr>
+		{% empty %}
+			<tr>
+				<td>
+					Nenhum funcionário encontrado
+				</td>
+				<td>
+					-
+				</td>
+				<td>
+					-
+				</td>
+				<td>
+					-
+				</td>
+				<td>
+					-
+				</td>
+				<td>
+					-
+				</td>
+				<td>
+						-
+					</td>
+
+			</tr>
+	{% endfor %}
+	</tbody>
+	<tfoot>
+		<tr>
+			<th>Nome</th>
+			<th>Endereço</th>
+			<th>Cidade</th>
+			<th>Estado</th>
+			<th>CPF</th>
+			<th>Função</th>
+			<th>Salário</th>
+		</tr>
+	</tfoot>
+</table>
+
+{% endblock %}
